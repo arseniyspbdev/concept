@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Честный мастер — концепт сайта</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f3efe6;--paper-2:#e8e2d4;--ink:#1d2a44;--ink-2:#34425f;--mute:#5d6678;--stamp:#2f5fb3;--red:#c23b2b;--line:#cbc3b2;--desk:#20242c}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scrollbar-color:var(--ink) var(--paper);-webkit-text-size-adjust:100%}
+body{background:var(--desk);color:var(--ink);font:16px/1.55 "Golos Text",system-ui,sans-serif}
+::selection{background:var(--stamp);color:#fff}
+:focus-visible{outline:2px solid var(--stamp);outline-offset:3px;border-radius:4px}
+a{color:inherit}
+.mono{font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums}
+.wrap{max-width:1160px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left))}
+.concept{background:var(--paper);color:var(--ink);font-size:13px;padding:8px 16px;text-align:center}
+.concept a{font-weight:600;text-underline-offset:3px}
+.top{background:var(--paper)}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:2px solid var(--ink)}
+.logo{font:800 20px "Golos Text";text-decoration:none;letter-spacing:-.01em}
+.logo span{color:var(--stamp)}
+header .ph{font:600 14px "Golos Text";text-decoration:none;padding:10px 16px;border:2px solid var(--ink);border-radius:8px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;padding:50px 0 60px;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:30px}}
+h1{font:800 clamp(40px,6.4vw,82px)/.98 "Golos Text";letter-spacing:-.035em;text-wrap:balance}
+h1 s{text-decoration-thickness:6px;text-decoration-color:var(--red);color:var(--mute)}
+.hero p{font-size:18px;color:var(--mute);max-width:44ch;margin:22px 0 0}
+.since{display:flex;flex-wrap:wrap;gap:22px;margin-top:28px;font-size:14px;color:var(--mute)}
+.since b{display:block;font:600 24px "JetBrains Mono";color:var(--ink)}
+.photo{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 30px 60px -30px #0008}
+.photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.05)}
+.photo .tag{position:absolute;left:14px;bottom:14px;background:var(--paper);padding:8px 12px;border-radius:4px;font-size:13px}
+
+/* estimate */
+.est{padding:80px 0}
+.est h2,.sec h2{font:800 clamp(32px,4.4vw,52px)/1.02 "Golos Text";letter-spacing:-.03em;color:var(--paper);text-wrap:balance}
+.est .lead{color:#b9c0cc;max-width:56ch;margin:14px 0 36px}
+.desk{display:grid;grid-template-columns:1fr 420px;gap:34px;align-items:start}
+@media(max-width:940px){.desk{grid-template-columns:1fr}}
+.hero>*,.desk>*{min-width:0}
+.works{display:grid;gap:8px}
+.work{display:grid;grid-template-columns:24px 1fr auto;gap:14px;align-items:center;padding:16px 18px;border-radius:10px;background:#2a2f39;color:#e6e9ef;cursor:pointer;border:1px solid #363c48;transition:border-color .2s,background .2s}
+.work:hover{border-color:#566078}
+.work input{appearance:none;width:22px;height:22px;border:1.5px solid #6b7488;border-radius:5px;margin:0;display:grid;place-items:center;cursor:pointer}
+.work input:checked{background:var(--paper);border-color:var(--paper)}
+.work input:checked::after{content:"";width:10px;height:6px;border:2.5px solid var(--ink);border-top:0;border-right:0;transform:rotate(-45deg) translate(1px,-1px)}
+.work small{display:block;color:#9aa3b5;font-size:13px}
+.work .pr{font:600 15px "JetBrains Mono";color:#fff;white-space:nowrap}
+.receipt{position:sticky;top:16px;background:var(--paper);color:var(--ink);padding:26px 24px 30px;border-radius:4px 4px 0 0;box-shadow:0 30px 60px -20px #000c;
+  -webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 10px) no-repeat,radial-gradient(circle 7px at 10px 100%,transparent 6.5px,#000 7px) bottom/20px 12px repeat-x;
+          mask:linear-gradient(#000 0 0) top/100% calc(100% - 10px) no-repeat,radial-gradient(circle 7px at 10px 100%,transparent 6.5px,#000 7px) bottom/20px 12px repeat-x}
+.receipt h3{font:600 13px "JetBrains Mono";text-transform:uppercase;letter-spacing:.12em;text-align:center}
+.receipt .addr{text-align:center;font:400 12px "JetBrains Mono";color:var(--mute);margin:4px 0 16px}
+.lines{border-top:1px dashed var(--ink-2);border-bottom:1px dashed var(--ink-2);padding:10px 0;min-height:96px}
+.ln{display:flex;gap:8px;font:400 13px/1.5 "JetBrains Mono";padding:3px 0;animation:print .35s cubic-bezier(.16,1,.3,1)}
+.ln .d{flex:1;border-bottom:1px dotted #9a9fa8;margin-bottom:5px}
+@keyframes print{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.empty{font:400 13px "JetBrains Mono";color:var(--mute);padding:28px 0;text-align:center}
+.sum{display:flex;justify-content:space-between;align-items:baseline;margin-top:12px;font:600 14px "JetBrains Mono"}
+.sum b{font-size:26px}
+.fine{font-size:12px;color:var(--mute);margin-top:8px}
+.stamp{position:absolute;right:18px;top:64px;transform:rotate(-12deg);border:3px solid var(--stamp);color:var(--stamp);font:800 15px "Golos Text";letter-spacing:.14em;padding:6px 12px;border-radius:6px;opacity:0;scale:1.6;transition:opacity .25s,scale .4s cubic-bezier(.2,1.6,.4,1)}
+.stamp.on{opacity:.85;scale:1}
+.receipt input{width:100%;font:15px "Golos Text";padding:11px;border:1px solid var(--line);border-radius:6px;background:#fff;margin-top:8px;color:var(--ink)}
+.receipt input::placeholder{color:#7b8291}
+.btn{width:100%;border:0;border-radius:8px;padding:15px;font:600 16px "Golos Text";background:var(--ink);color:var(--paper);cursor:pointer;margin-top:12px;transition:background .2s,transform .2s cubic-bezier(.2,.8,.2,1)}
+.btn:hover{background:var(--ink-2)}.btn:active{transform:scale(.98)}
+.err{color:var(--red);font-size:13px;min-height:18px;margin-top:6px}
+.ok{display:none;text-align:center;padding-top:12px}.ok.show{display:block}
+.ok h4{font:800 22px "Golos Text";margin-bottom:6px}
+
+.sec{padding:70px 0;border-top:1px solid #363c48}
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:30px;color:#c4cad6}
+@media(max-width:760px){.rules{grid-template-columns:1fr}}
+.rules h3{color:var(--paper);font:600 19px "Golos Text";margin-bottom:8px}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;color:#c4cad6}
+@media(max-width:760px){.info{grid-template-columns:1fr}}
+.info h3{font:600 12px "JetBrains Mono";text-transform:uppercase;letter-spacing:.14em;color:#8b95a9;margin-bottom:8px}
+.info p{color:var(--paper);font-size:18px}
+footer{padding:28px 0 60px;font-size:13px;color:#8b95a9;border-top:1px solid #363c48}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="concept">Концепт сайта для автосервиса «Честный мастер» — не официальный сайт. Сделал <a href="https://t.me/arseniyspbdev" target="_blank" rel="noopener">Арсений</a> по открытым данным 2ГИС. Фото — Unsplash.</div>
+<div class="top">
+  <div class="wrap">
+    <header><a class="logo" href="#">Честный <span>мастер</span></a><a class="ph" href="#est">Собрать смету</a></header>
+    <div class="hero">
+      <div>
+        <h1>Автосервис без <s>обмана</s> и&nbsp;завышенных цен</h1>
+        <p>Ржевка, Индустриальный проспект. Электрика, АКПП и вариаторы, диагностика, кондиционеры, осмотр перед покупкой. Цену видно до того, как вы приехали.</p>
+        <div class="since"><div><b>с 2020</b>чиним авто</div><div><b>4,9</b>105 отзывов в 2ГИС</div><div><b>9–21</b>каждый день</div></div>
+      </div>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1100&q=70" alt="Ремонт автомобиля в боксе" loading="eager"><span class="tag">Работаем только у себя, в тёплом боксе</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="est" id="est">
+  <div class="wrap">
+    <h2>Смета — до визита, а не после</h2>
+    <p class="lead">Отметьте, что нужно машине. Справа сразу печатается квитанция с ценами из нашего прайса — ровно столько, сколько стоит работа.</p>
+    <div class="desk">
+      <div class="works" id="works"></div>
+      <div class="receipt" id="rc">
+        <div class="stamp" id="stamp">ЧЕСТНО</div>
+        <h3>Смета · Честный мастер</h3>
+        <div class="addr">Индустриальный пр., 66 лит Б</div>
+        <div class="lines" id="lines"><div class="empty">отметьте работы слева</div></div>
+        <div class="sum"><span>ИТОГО</span><b id="sum">0 ₽</b></div>
+        <p class="fine">«От» — минимальная цена. Точную стоимость назовёт мастер после диагностики.</p>
+        <div id="form">
+          <input id="car" placeholder="Марка и модель, например Kia Rio">
+          <input id="ph" placeholder="Телефон" inputmode="tel" autocomplete="tel">
+          <div class="err" id="err" role="alert"></div>
+          <button class="btn" id="send" type="button">Записаться со сметой</button>
+        </div>
+        <div class="ok" id="ok" aria-live="polite"><h4>Смета отправлена</h4><p class="fine" id="okTxt"></p><p class="fine">Концепт: в рабочей версии смета придёт мастеру в Telegram.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <h2>Как мы работаем</h2>
+    <div class="rules">
+      <div><h3>Открытый прайс</h3><p>Цены на основные работы — на сайте. Смету видно ещё до того, как вы приехали.</p></div>
+      <div><h3>Оплата за результат</h3><p>Электрику чиним «по делу»: платите за устранённую неисправность, а не за часы поиска.</p></div>
+      <div><h3>Сложное — профильным</h3><p>Для трудных случаев есть отдельный электронщик-диагност, а АКПП и вариаторы — отдельное направление.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap info">
+    <div><h3>Адрес</h3><p>Индустриальный пр., 66 лит Б, 1 этаж<br>Ржевка, Красногвардейский район</p></div>
+    <div><h3>Часы</h3><p>Каждый день 09:00–21:00</p></div>
+    <div><h3>Связь</h3><p>Telegram · WhatsApp · ВКонтакте · почта</p></div>
+  </div>
+</section>
+<footer><div class="wrap">«Честный мастер» · концепт сайта, цены из карточки 2ГИС (обновлены 13.08.2026), фото — Unsplash. Сделал Арсений — <a href="https://arseniyspbdev.github.io/" target="_blank" rel="noopener">портфолио</a>.</div></footer>
+
+<script>
+const W=[["Диагностика подвески и подкапотного пространства","осмотр всех узлов",500,""],["Автоэлектрик","поиск и ремонт неисправностей, генераторы, стартеры",1000,"от "],["Электронщик-диагност","сложные случаи по электронике",5000,"от "],["Заправка автокондиционера","",3500,""],["Ремонт АКПП, вариатора, робота","4, 5, 6 ступеней, CVT",15000,"от "],["Осмотр авто перед покупкой","поедем смотреть вместе с вами",2500,""]];
+const rub=n=>n.toLocaleString("ru-RU")+" ₽",sel=new Set();
+const works=document.getElementById("works");
+works.innerHTML=W.map(([n,s,p,f],i)=>`<label class="work"><input type="checkbox" data-i="${i}"><span>${n}${s?`<small>${s}</small>`:""}</span><span class="pr">${f}${rub(p)}</span></label>`).join("");
+works.querySelectorAll("input").forEach(c=>c.onchange=()=>{c.checked?sel.add(+c.dataset.i):sel.delete(+c.dataset.i);draw()});
+function draw(){const L=document.getElementById("lines"),a=[...sel].sort();if(!a.length){L.innerHTML='<div class="empty">отметьте работы слева</div>';document.getElementById("sum").textContent="0 ₽";document.getElementById("stamp").classList.remove("on");return}
+ L.innerHTML=a.map(i=>`<div class="ln"><span>${W[i][0].split(",")[0]}</span><span class="d"></span><span>${W[i][3]}${rub(W[i][2])}</span></div>`).join("");
+ const s=a.reduce((x,i)=>x+W[i][2],0),from=a.some(i=>W[i][3]);document.getElementById("sum").textContent=(from?"от ":"")+rub(s);const st=document.getElementById("stamp");st.classList.remove("on");void st.offsetWidth;st.classList.add("on")}
+document.getElementById("send").onclick=()=>{const e=document.getElementById("err"),car=document.getElementById("car").value.trim(),p=document.getElementById("ph").value.replace(/\D/g,"");
+ if(!sel.size)return e.textContent="Отметьте хотя бы одну работу.";if(car.length<2)return e.textContent="Напишите марку и модель машины.";if(p.length<10)return e.textContent="Проверьте телефон: нужно 10–11 цифр.";e.textContent="";
+ document.getElementById("okTxt").textContent=`${car}: ${[...sel].map(i=>W[i][0].split(",")[0]).join(", ")} — ${document.getElementById("sum").textContent}. Перезвоним и согласуем время.`;document.getElementById("form").style.display="none";document.getElementById("ok").classList.add("show")};
+</script>
+</body>
+</html>

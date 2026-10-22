@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Пижама — концепт сайта</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1f2f5c;--navy-2:#2c3f73;--sky:#dfe7f5;--stripe:#c9d6ee;--milk:#fbf8f2;--yolk:#f2b632;--jam:#c2473a;--ink:#1b2340;--mute:#56607d;--line:#cfd8ea}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scrollbar-color:var(--navy) var(--milk);-webkit-text-size-adjust:100%}
+body{background:var(--milk);color:var(--ink);font:16px/1.55 "Golos Text",system-ui,sans-serif}
+::selection{background:var(--yolk);color:var(--ink)}
+:focus-visible{outline:2px solid var(--jam);outline-offset:3px;border-radius:6px}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left))}
+.concept{background:var(--navy);color:var(--milk);font-size:13px;padding:8px 16px;text-align:center}
+.concept a{font-weight:600;text-underline-offset:3px}
+.flannel{background:
+  repeating-linear-gradient(90deg,transparent 0 46px,rgba(31,47,92,.10) 46px 52px,transparent 52px 64px,rgba(31,47,92,.06) 64px 66px),
+  repeating-linear-gradient(0deg,transparent 0 46px,rgba(31,47,92,.08) 46px 52px,transparent 52px 64px,rgba(194,71,58,.07) 64px 66px),var(--sky)}
+header{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font:400 30px/1 "Yeseva One",serif;text-decoration:none;color:var(--navy)}
+.hdr a{font:600 14px "Golos Text";padding:10px 16px;border-radius:999px;background:var(--navy);color:var(--milk);text-decoration:none}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:end;padding:30px 0 70px}
+@media(max-width:860px){.hero{grid-template-columns:1fr;padding-bottom:50px}}
+.hero>*,.book>*{min-width:0}
+h1{font:400 clamp(46px,8vw,104px)/.95 "Yeseva One",serif;color:var(--navy);letter-spacing:-.01em;text-wrap:balance}
+.hero p{font-size:19px;color:var(--mute);max-width:40ch;margin-top:22px}
+.clock{background:var(--milk);border-radius:24px;padding:26px;box-shadow:0 24px 50px -28px #1f2f5c80}
+.clock .state{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--navy)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--yolk);box-shadow:0 0 0 0 #f2b63299;animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 12px #f2b63200}100%{box-shadow:0 0 0 0 #f2b63200}}
+.clock .big{font:400 46px/1.05 "Yeseva One";color:var(--ink);margin:12px 0 6px;font-variant-numeric:tabular-nums}
+.clock .small{color:var(--mute);font-size:14px}
+.bar{height:8px;border-radius:99px;background:var(--sky);margin:18px 0 4px;overflow:hidden}
+.bar i{display:block;height:100%;width:var(--w,40%);background:linear-gradient(90deg,var(--yolk),var(--jam));border-radius:99px;transition:width 1.2s cubic-bezier(.16,1,.3,1)}
+.scale{display:flex;justify-content:space-between;font-size:12px;color:var(--mute)}
+.clock .btn{margin-top:20px;width:100%}
+.btn{display:inline-flex;justify-content:center;align-items:center;border:0;border-radius:14px;padding:15px 22px;font:600 16px "Golos Text";background:var(--navy);color:var(--milk);cursor:pointer;text-decoration:none;transition:background .25s,transform .2s cubic-bezier(.2,.8,.2,1)}
+.btn:hover{background:var(--navy-2)}.btn:active{transform:scale(.98)}
+
+section{padding:80px 0}
+h2{font:400 clamp(36px,5vw,60px)/1 "Yeseva One",serif;color:var(--navy);text-wrap:balance}
+.menu-h{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin-bottom:28px}
+.sw{display:inline-flex;background:var(--sky);border-radius:999px;padding:4px}
+.sw button{border:0;background:transparent;padding:10px 18px;border-radius:999px;font:600 14px "Golos Text";color:var(--mute);cursor:pointer}
+.sw button[aria-pressed=true]{background:var(--navy);color:var(--milk)}
+.dishes{columns:2 360px;column-gap:56px}
+.dish{break-inside:avoid;display:flex;justify-content:space-between;gap:18px;padding:16px 0;border-bottom:1px dashed var(--line)}
+.dish span:last-child{font:400 22px "Yeseva One";color:var(--jam);white-space:nowrap;font-variant-numeric:tabular-nums}
+.note{margin-top:18px;font-size:14px;color:var(--mute)}
+
+.book{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+@media(max-width:860px){.book{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:24px;padding:28px;box-shadow:0 24px 50px -30px #1f2f5c66}
+@media(max-width:560px){.card{padding:20px 16px}}
+.lbl{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mute);font-weight:600;margin:16px 0 8px}
+.lbl:first-child{margin-top:0}
+.row{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}
+.chip{flex:0 0 auto;border:1px solid var(--line);background:var(--milk);padding:9px 12px;border-radius:12px;font:500 14px "Golos Text";cursor:pointer;color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:var(--milk)}
+.ppl{display:flex;align-items:center;gap:14px}
+.ppl button{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--milk);font-size:20px;cursor:pointer;color:var(--navy)}
+.ppl b{font:400 30px "Yeseva One";min-width:30px;text-align:center}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+input{width:100%;font:16px "Golos Text";padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--milk);color:var(--ink)}
+input::placeholder{color:#7a829c}
+.err{color:var(--jam);font-size:13px;min-height:18px;margin:8px 0}
+.card .btn{width:100%}
+.ok{display:none;text-align:center;padding:20px 0}.ok.show{display:block}
+.ok h3{font:400 36px "Yeseva One";color:var(--navy);margin-bottom:8px}
+.facts{display:grid;gap:18px}
+.facts div{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start}
+.facts svg{color:var(--jam)}
+.facts b{display:block}
+.facts span{color:var(--mute);font-size:15px}
+footer{border-top:1px solid var(--line);padding:28px 0 60px;font-size:13px;color:var(--mute)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="concept">Концепт сайта для бистро «Пижама» — не официальный сайт. Сделал <a href="https://t.me/arseniyspbdev" target="_blank" rel="noopener">Арсений</a> по открытым данным 2ГИС.</div>
+<div class="flannel">
+  <div class="wrap">
+    <header><a class="logo" href="#">Пижама</a><span class="hdr"><a href="#book">Забронировать</a></span></header>
+    <div class="hero">
+      <div>
+        <h1>Завтракать можно хоть до четырёх</h1>
+        <p>Бистро с видом на парк на Московском шоссе. Сырники, шакшука, бенедикт — и спешлы выходных.</p>
+      </div>
+      <div class="clock" aria-live="polite">
+        <div class="state"><span class="dot"></span><span id="st">Завтраки подают</span></div>
+        <div class="big" id="big">ещё 3 ч 20 мин</div>
+        <div class="small" id="sm">завтрак — с 10:00 до 16:00</div>
+        <div class="bar"><i id="bar"></i></div>
+        <div class="scale"><span>10:00</span><span>16:00</span><span>22:00</span></div>
+        <a class="btn" href="#book">Забронировать столик</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="menu-h"><h2>Меню</h2>
+      <div class="sw" role="group" aria-label="Раздел меню"><button aria-pressed="true" data-k="b">Завтрак до 16:00</button><button aria-pressed="false" data-k="h">Горячее</button></div>
+    </div>
+    <div class="dishes" id="dishes"></div>
+    <p class="note">Цены из карточки 2ГИС. Полное меню — 58 позиций, в рабочей версии оно будет здесь целиком.</p>
+  </div>
+</section>
+
+<section id="book" style="background:var(--sky)">
+  <div class="wrap book">
+    <div>
+      <h2>Столик с видом на парк</h2>
+      <div class="facts" style="margin-top:28px">
+        <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><b>Московское шоссе, 3 к5</b><span>ЖК Neopark, 1 этаж · Звёздное</span></div></div>
+        <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>10:00–22:00</b><span>завтраки до 16:00</span></div></div>
+        <div><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><div><b>4,9 в 2ГИС</b><span>191 отзыв</span></div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div id="form">
+        <div class="lbl">День</div><div class="row" id="days"></div>
+        <div class="lbl">Время</div><div class="row" id="times"></div>
+        <div class="lbl">Гостей</div>
+        <div class="ppl"><button type="button" id="minus" aria-label="Меньше гостей">−</button><b id="pp">2</b><button type="button" id="plus" aria-label="Больше гостей">+</button></div>
+        <div class="lbl">Контакты</div>
+        <div class="two"><input id="nm" placeholder="Имя" autocomplete="given-name"><input id="ph" placeholder="Телефон" inputmode="tel" autocomplete="tel"></div>
+        <div class="err" id="err" role="alert"></div>
+        <button class="btn" id="send" type="button">Забронировать</button>
+      </div>
+      <div class="ok" id="ok" aria-live="polite"><h3>Столик ваш</h3><p id="okTxt"></p><p style="font-size:12px;color:var(--mute);margin-top:10px">Концепт: в рабочей версии бронь сразу придёт администратору в Telegram.</p></div>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap">«Пижама» · концепт сайта, меню и адрес из карточки 2ГИС, октябрь 2026. Сделал Арсений — <a href="https://arseniyspbdev.github.io/" target="_blank" rel="noopener">портфолио</a>.</div></footer>
+
+<script>
+const D={b:[["Шакшука из двух яиц с тартином",680],["Домашние сырники с абрикосовым вареньем",550],["Сырники с муссом из варёной сгущёнки",560],["Бенедикт с форелью на гречневых панкейках",950],["Френч-тост с кремом из маскарпоне и томлёной сливой",690],["Скрэмбл с трюфелем и пармезаном",450],["Датский завтрак с мортаделлой",790],["Домашние драники со сметаной",480],["Манная каша со свежей клубникой",490],["Овсяная каша с абрикосовым вареньем",450]],
+h:[["Бефстроганов с картофельным пюре",850],["Стейк форели с брокколи и икорным соусом",1190],["Лимонная паста с креветками",820],["Тальятелле с болоньезе",790],["Орекьетте с курицей и горгонзолой",790],["Сливочная паста с лисичками",730],["Сковородка лисичек с жареным картофелем",650],["Стейк из курицы с киноа и чимичурри",750]]};
+const rub=n=>n.toLocaleString("ru-RU")+" ₽",dl=document.getElementById("dishes");
+function menu(k){dl.innerHTML=D[k].map(([n,p])=>`<div class="dish"><span>${n}</span><span>${rub(p)}</span></div>`).join("")}
+document.querySelectorAll(".sw button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".sw button").forEach(x=>x.setAttribute("aria-pressed",x===b));menu(b.dataset.k)});menu("b");
+function clock(){const n=new Date(),m=n.getHours()*60+n.getMinutes(),st=document.getElementById("st"),big=document.getElementById("big"),sm=document.getElementById("sm");
+ const f=x=>{const h=Math.floor(x/60),mm=x%60;return (h?h+" ч ":"")+mm+" мин"};
+ if(m<600){st.textContent="Скоро откроемся";big.textContent="через "+f(600-m);sm.textContent="первые завтраки — в 10:00"}
+ else if(m<960){st.textContent="Завтраки подают";big.textContent="ещё "+f(960-m);sm.textContent="завтрак — до 16:00"}
+ else if(m<1320){st.textContent="Открыто до 22:00";big.textContent="горячее до "+"22:00";sm.textContent="завтраки снова завтра с 10:00"}
+ else{st.textContent="Закрыто";big.textContent="до завтра";sm.textContent="откроемся в 10:00 — с завтраками"}
+ document.getElementById("bar").style.setProperty("--w",Math.max(0,Math.min(100,(m-600)/720*100))+"%")}
+clock();setInterval(clock,30000);
+const now=new Date(),wd=["вс","пн","вт","ср","чт","пт","сб"],days=document.getElementById("days"),times=document.getElementById("times");let day=null,tm=null,pp=2;
+for(let i=0;i<10;i++){const d=new Date(now);d.setDate(now.getDate()+i);const b=document.createElement("button");b.className="chip";b.type="button";b.textContent=i===0?"сегодня":i===1?"завтра":`${wd[d.getDay()]}, ${d.getDate()}`;b.setAttribute("aria-pressed","false");b.onclick=()=>{day=d;days.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b));ts(i)};days.appendChild(b)}
+function ts(i){times.innerHTML="";tm=null;for(let h=10;h<22;h++)for(const m of["00","30"]){if(h===21&&m==="30")continue;if(i===0&&h<=now.getHours())continue;const b=document.createElement("button");b.className="chip";b.type="button";b.textContent=`${h}:${m}`;b.setAttribute("aria-pressed","false");b.onclick=()=>{tm=b.textContent;times.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b))};times.appendChild(b)}
+ if(!times.children.length)times.innerHTML='<span style="color:var(--mute);font-size:14px">На сегодня уже поздно — выберите другой день.</span>'}
+days.firstChild.click();
+if(!times.querySelector(".chip"))days.children[1].click();
+const ppEl=document.getElementById("pp");document.getElementById("minus").onclick=()=>{pp=Math.max(1,pp-1);ppEl.textContent=pp};document.getElementById("plus").onclick=()=>{pp=Math.min(12,pp+1);ppEl.textContent=pp};
+document.getElementById("send").onclick=()=>{const e=document.getElementById("err"),n=document.getElementById("nm").value.trim(),p=document.getElementById("ph").value.replace(/\D/g,"");
+ if(!tm)return e.textContent="Выберите время.";if(n.length<2)return e.textContent="Напишите имя.";if(p.length<10)return e.textContent="Проверьте телефон: нужно 10–11 цифр.";e.textContent="";
+ document.getElementById("okTxt").textContent=`${n}, ждём вас ${day.toLocaleDateString("ru-RU",{day:"numeric",month:"long"})} в ${tm}, гостей: ${pp}.`;document.getElementById("form").style.display="none";document.getElementById("ok").classList.add("show")};
+</script>
+</body>
+</html>

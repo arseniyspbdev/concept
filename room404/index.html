@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Room 404 Barbershop — концепт сайта</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wood:#17110d; --wood-2:#211912; --wood-3:#2c2118;
+  --brass:#c9a15a; --brass-hi:#ecd29a; --brass-lo:#8a6a33;
+  --cream:#efe6d6; --cream-2:#c9bca6; --line:rgba(201,161,90,.22);
+  --ok:#9fc79a;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--wood);color:var(--cream);font:16px/1.55 "Golos Text",system-ui,sans-serif;
+  background-image:repeating-linear-gradient(92deg,rgba(255,255,255,.012) 0 2px,transparent 2px 9px),
+  radial-gradient(1200px 600px at 70% -10%,#3a2a1b 0,transparent 60%);}
+::selection{background:var(--brass);color:var(--wood)}
+:focus-visible{outline:2px solid var(--brass-hi);outline-offset:3px;border-radius:6px}
+html{scrollbar-color:var(--brass-lo) var(--wood)}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left))}
+.concept{background:var(--brass);color:var(--wood);font-size:13px;padding:8px 0;text-align:center}
+.concept a{font-weight:600;text-underline-offset:3px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font:800 20px "Playfair Display",serif;letter-spacing:.02em;text-decoration:none}
+.logo span{color:var(--brass)}
+nav a{font-size:14px;color:var(--cream-2);text-decoration:none;margin-left:22px}
+nav a:hover{color:var(--brass-hi)}
+@media(max-width:640px){nav a:not(.cta-link){display:none}}
+.cta-link{color:var(--brass-hi)!important;font-weight:600}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:start;padding:40px 0 80px}
+@media(max-width:900px){.hero{grid-template-columns:1fr;gap:36px;padding-top:12px}}
+.hero>*{min-width:0}
+@media(max-width:480px){.door{padding:30px 20px}.plaque b{font-size:48px}}
+.door{position:relative;padding:44px 36px 40px;border-radius:14px;
+  background:linear-gradient(180deg,#2a1f16,#1d1610);box-shadow:inset 0 0 0 1px var(--line),0 30px 60px -30px #000}
+.door::before{content:"";position:absolute;inset:18px;border:1px solid rgba(201,161,90,.12);border-radius:8px;pointer-events:none}
+.plaque{display:inline-flex;align-items:center;gap:18px;padding:14px 26px 16px;border-radius:999px;
+  background:linear-gradient(160deg,var(--brass-hi),var(--brass) 45%,var(--brass-lo));color:#2a1d0c;
+  box-shadow:0 2px 0 rgba(255,255,255,.35) inset,0 -3px 6px rgba(0,0,0,.25) inset,0 14px 28px -12px rgba(0,0,0,.8)}
+.plaque b{font:800 64px/1 "Playfair Display",serif;letter-spacing:-.02em}
+.plaque small{font-size:12px;line-height:1.2;text-transform:uppercase;letter-spacing:.14em;font-weight:600}
+.plaque i{width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff7,#5a4420);box-shadow:0 1px 1px #0006}
+h1{font:800 clamp(38px,6vw,68px)/1.02 "Playfair Display",serif;letter-spacing:-.02em;margin:34px 0 18px;text-wrap:balance}
+h1 em{font-style:italic;color:var(--brass-hi)}
+.lead{font-size:18px;color:var(--cream-2);max-width:46ch}
+.facts{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:28px;font-size:14px;color:var(--cream-2)}
+.facts b{color:var(--cream);font-weight:600}
+.facts svg{vertical-align:-3px;margin-right:6px;color:var(--brass)}
+
+/* booking */
+.book{background:var(--cream);color:#24190f;border-radius:16px;padding:26px;box-shadow:0 30px 60px -28px #000}
+.book h2{font:800 26px/1.15 "Playfair Display",serif;margin-bottom:4px}
+.book p.sub{font-size:14px;color:#6d5a44;margin-bottom:18px}
+.lbl{font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:600;color:#7a6346;margin:16px 0 8px}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:#e3d7c2;padding:4px;border-radius:10px}
+.seg button{border:0;background:transparent;padding:9px 4px;border-radius:7px;font:500 13px "Golos Text";color:#4b3a27;cursor:pointer}
+.seg button[aria-pressed=true]{background:#24190f;color:var(--cream)}
+select,input{width:100%;font:16px "Golos Text";padding:11px 12px;border-radius:10px;border:1px solid #cdbd9f;background:#f8f2e7;color:#24190f}
+select:focus,input:focus{outline:2px solid var(--brass-lo);outline-offset:1px}
+input::placeholder{color:#8f7a5d}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.chip{flex:0 0 auto;border:1px solid #cdbd9f;background:#f8f2e7;border-radius:10px;padding:8px 10px;font:500 13px "Golos Text";color:#3b2c1c;cursor:pointer;text-align:center;min-width:56px}
+.chip small{display:block;font-size:11px;color:#8a7458}
+.chip[aria-pressed=true]{background:#24190f;border-color:#24190f;color:var(--cream)}
+.chip[aria-pressed=true] small{color:var(--brass-hi)}
+.chip:disabled{opacity:.35;cursor:not-allowed;text-decoration:line-through}
+.times{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:6px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin:18px 0 12px;font-size:14px;color:#6d5a44}
+.total b{font:800 28px "Playfair Display",serif;color:#24190f;font-variant-numeric:tabular-nums}
+.btn{width:100%;border:0;border-radius:12px;padding:15px;font:600 16px "Golos Text";cursor:pointer;
+  background:#24190f;color:var(--brass-hi);transition:transform .2s cubic-bezier(.2,.8,.2,1),background .2s}
+.btn:hover{background:#3a2a1a}
+.btn:active{transform:scale(.985)}
+.err{color:#a2361f;font-size:13px;min-height:18px;margin-top:8px}
+.done{display:none;text-align:center;padding:24px 6px}
+.done.show{display:block;animation:pop .5s cubic-bezier(.16,1,.3,1)}
+.done h3{font:800 28px "Playfair Display",serif;margin:12px 0 6px}
+.done p{color:#6d5a44;font-size:14px}
+.key{width:72px;height:96px;margin:0 auto;border-radius:36px 36px 14px 14px;background:linear-gradient(160deg,var(--brass-hi),var(--brass) 50%,var(--brass-lo));display:grid;place-items:center;font:800 22px "Playfair Display";color:#2a1d0c;box-shadow:0 12px 20px -10px #0008}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
+
+/* price */
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2.sec{font:800 clamp(30px,4vw,44px)/1.1 "Playfair Display",serif;margin-bottom:14px;text-wrap:balance}
+.sec-lead{color:var(--cream-2);max-width:60ch;margin-bottom:34px}
+.price{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.price th,.price td{padding:14px 10px;border-bottom:1px solid var(--line);text-align:right}
+.price th:first-child,.price td:first-child{text-align:left;padding-left:0}
+.price thead th{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--brass);font-weight:600}
+.price td:first-child{font-weight:500}
+.price tbody tr:hover td{color:var(--brass-hi)}
+.scroll{overflow-x:auto}
+@media(max-width:560px){.price th,.price td{padding:12px 6px;font-size:14px}}
+.extras{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 40px;margin-top:40px}
+.extras div{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.extras div span:last-child{color:var(--brass-hi);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.find{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:800px){.find{grid-template-columns:1fr}}
+.find dl{display:grid;grid-template-columns:auto 1fr;gap:12px 22px}
+.find dt{color:var(--brass);font-size:13px;text-transform:uppercase;letter-spacing:.1em;padding-top:3px}
+.rating{font:800 88px/1 "Playfair Display",serif;color:var(--brass-hi)}
+.rating small{display:block;font:500 15px "Golos Text";color:var(--cream-2);margin-top:10px}
+footer{padding:36px 0 60px;border-top:1px solid var(--line);font-size:13px;color:var(--cream-2)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="concept">Концепт сайта для Room 404 Barbershop — не официальный сайт. Сделал <a href="https://t.me/arseniyspbdev" target="_blank" rel="noopener">Арсений</a> по открытым данным 2ГИС.</div>
+
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#">Room <span>404</span></a>
+    <nav><a href="#price">Цены</a><a href="#find">Как найти</a><a class="cta-link" href="#book">Записаться</a></nav>
+  </header>
+
+  <div class="hero">
+    <div class="door">
+      <div class="plaque"><i></i><b>404</b><small>Barber<br>shop</small><i></i></div>
+      <h1>Стрижка, которая вам <em>подойдёт</em></h1>
+      <p class="lead">Барбершоп за дверью с номером 404 в Парголово. Стрижки, борода, уход — и мастер того уровня, который нужен именно вам.</p>
+      <div class="facts">
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><b>ул. Фёдора Абрамова, 16 к1</b></span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b>ежедневно 10:00–22:00</b></span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><b>5,0</b> · 87 отзывов в 2ГИС</span>
+      </div>
+    </div>
+
+    <form class="book" id="book" novalidate>
+      <div id="formBody">
+        <h2>Запись к барберу</h2>
+        <p class="sub">Выберите услугу, мастера и время — займёт минуту.</p>
+
+        <div class="lbl">Уровень мастера</div>
+        <div class="seg" role="group" aria-label="Уровень мастера">
+          <button type="button" data-lvl="0" aria-pressed="true">Барбер</button>
+          <button type="button" data-lvl="1" aria-pressed="false">Топ-барбер</button>
+          <button type="button" data-lvl="2" aria-pressed="false">Старший</button>
+        </div>
+
+        <div class="lbl"><label for="svc">Услуга</label></div>
+        <select id="svc"></select>
+
+        <div class="lbl">День</div>
+        <div class="chips" id="days"></div>
+
+        <div class="lbl">Время</div>
+        <div class="times" id="times"></div>
+
+        <div class="lbl">Контакты</div>
+        <div class="two">
+          <input id="nm" placeholder="Имя" autocomplete="given-name">
+          <input id="ph" placeholder="+7 900 000-00-00" inputmode="tel" autocomplete="tel">
+        </div>
+
+        <div class="total"><span>К оплате в барбершопе</span><b id="sum">1 500 ₽</b></div>
+        <button class="btn" type="submit">Записаться</button>
+        <div class="err" id="err" role="alert"></div>
+      </div>
+      <div class="done" id="done" aria-live="polite">
+        <div class="key">404</div>
+        <h3>Вы записаны</h3>
+        <p id="doneTxt"></p>
+        <p style="margin-top:12px;font-size:12px">Концепт: в рабочей версии заявка сразу придёт администратору в Telegram.</p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<section id="price">
+  <div class="wrap">
+    <h2 class="sec">Цены без сюрпризов</h2>
+    <p class="sec-lead">Цена зависит только от услуги и уровня мастера — выберите столбец и сразу видно, сколько вы заплатите.</p>
+    <div class="scroll">
+      <table class="price">
+        <thead><tr><th>Услуга</th><th>Барбер</th><th>Топ-барбер</th><th>Старший</th></tr></thead>
+        <tbody id="ptable"></tbody>
+      </table>
+    </div>
+    <div class="extras">
+      <div><span>Премиум-уход за лицом</span><span>700 ₽</span></div>
+      <div><span>Уход за кожей головы</span><span>800 ₽</span></div>
+      <div><span>Восковая коррекция</span><span>400 ₽</span></div>
+      <div><span>Камуфляж седины</span><span>1 000 ₽</span></div>
+      <div><span>Укладка волос</span><span>500 ₽</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="find">
+  <div class="wrap find">
+    <div>
+      <h2 class="sec">Как нас найти</h2>
+      <dl>
+        <dt>Адрес</dt><dd>улица Фёдора Абрамова, 16 к1<br>пос. Парголово, Выборгский район</dd>
+        <dt>Часы</dt><dd>каждый день с 10:00 до 22:00</dd>
+        <dt>Связь</dt><dd>Telegram · WhatsApp · ВКонтакте</dd>
+      </dl>
+    </div>
+    <div class="rating">5,0<small>средняя оценка в 2ГИС, 87 отзывов (октябрь 2026)</small></div>
+  </div>
+</section>
+
+<footer><div class="wrap">Room 404 Barbershop · концепт сайта, цены и адрес — из карточки 2ГИС, октябрь 2026. Сделал Арсений, <a href="https://arseniyspbdev.github.io/" target="_blank" rel="noopener">портфолио</a>.</div></footer>
+
+<script>
+const SVC=[["Мужская стрижка",[1500,1800,2000]],["Удлинённая стрижка",[1800,2100,2300]],["Стрижка машинкой",[700,900,1100]],["Коррекция бороды",[700,1000,1300]],["Моделирование бороды",[1000,1300,1600]],["Детская стрижка",[1300,1500,1800]]];
+const LV=["барбер","топ-барбер","старший барбер"];
+const rub=n=>n.toLocaleString("ru-RU")+" ₽";
+let lvl=0,day=null,time=null;
+const svc=document.getElementById("svc"),sum=document.getElementById("sum");
+document.getElementById("ptable").innerHTML=SVC.map(([n,p])=>`<tr><td>${n}</td>${p.map(x=>`<td>${rub(x)}</td>`).join("")}</tr>`).join("");
+function fillSvc(){const i=svc.selectedIndex<0?0:svc.selectedIndex;svc.innerHTML=SVC.map(([n,p])=>`<option>${n} — ${rub(p[lvl])}</option>`).join("");svc.selectedIndex=i;sum.textContent=rub(SVC[i][1][lvl]);}
+document.querySelectorAll(".seg button").forEach(b=>b.onclick=()=>{lvl=+b.dataset.lvl;document.querySelectorAll(".seg button").forEach(x=>x.setAttribute("aria-pressed",x===b));fillSvc();});
+svc.onchange=()=>sum.textContent=rub(SVC[svc.selectedIndex][1][lvl]);
+fillSvc();
+const days=document.getElementById("days"),times=document.getElementById("times");
+const wd=["вс","пн","вт","ср","чт","пт","сб"],now=new Date();
+for(let i=0;i<10;i++){const d=new Date(now);d.setDate(now.getDate()+i);const b=document.createElement("button");b.type="button";b.className="chip";b.setAttribute("aria-pressed","false");b.innerHTML=`${i===0?"сегодня":i===1?"завтра":wd[d.getDay()]}<small>${d.getDate()}.${String(d.getMonth()+1).padStart(2,"0")}</small>`;b.onclick=()=>{day=d;days.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b));renderTimes(i);};days.appendChild(b);}
+function seed(n){let x=Math.sin(n)*1e4;return x-Math.floor(x);}
+function renderTimes(i){times.innerHTML="";time=null;for(let h=10;h<22;h++){for(const m of ["00","30"]){if(h===21&&m==="30")continue;const b=document.createElement("button");b.type="button";b.className="chip";b.textContent=`${h}:${m}`;const past=i===0&&(h<now.getHours()+1);const busy=seed(i*100+h*2+(m==="30"))>.62;b.disabled=past||busy;b.setAttribute("aria-pressed","false");b.onclick=()=>{time=b.textContent;times.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b));};times.appendChild(b);}}}
+days.firstChild.click();
+if(!times.querySelector(".chip:not(:disabled)"))days.children[1].click();
+document.getElementById("book").onsubmit=e=>{e.preventDefault();const err=document.getElementById("err"),nm=document.getElementById("nm").value.trim(),ph=document.getElementById("ph").value.replace(/\D/g,"");
+ if(!time){err.textContent="Выберите свободное время.";return;} if(nm.length<2){err.textContent="Напишите, как к вам обращаться.";return;} if(ph.length<10){err.textContent="Проверьте телефон: нужно 10–11 цифр.";return;} err.textContent="";
+ document.getElementById("doneTxt").textContent=`${nm}, ждём вас ${day.toLocaleDateString("ru-RU",{day:"numeric",month:"long"})} в ${time}. ${SVC[svc.selectedIndex][0]}, ${LV[lvl]} — ${rub(SVC[svc.selectedIndex][1][lvl])}.`;
+ document.getElementById("formBody").style.display="none";document.getElementById("done").classList.add("show");};
+</script>
+</body>
+</html>

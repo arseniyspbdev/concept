@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Барбер Крафт — концепт сайта</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--kraft:#d9b98c;--kraft-2:#cba776;--paper:#f2e6d2;--ink:#1d1a16;--yellow:#ffd23f;--red:#c8382c;--mute:#5e5245;--line:#b8976a}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scrollbar-color:var(--ink) var(--kraft);-webkit-text-size-adjust:100%}
+body{background:var(--kraft);color:var(--ink);font:16px/1.55 Rubik,system-ui,sans-serif;
+  background-image:radial-gradient(#00000010 1px,transparent 1px),radial-gradient(#ffffff18 1px,transparent 1px);background-size:6px 6px,9px 9px;background-position:0 0,3px 4px}
+::selection{background:var(--yellow);color:var(--ink)}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:4px}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left))}
+.concept{background:var(--ink);color:var(--paper);font-size:13px;padding:8px 16px;text-align:center}
+.concept a{font-weight:600;text-underline-offset:3px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font:400 18px "Rubik Mono One";text-decoration:none;letter-spacing:.02em}
+.open{font:700 13px Rubik;text-transform:uppercase;letter-spacing:.08em;background:var(--yellow);padding:8px 12px;border-radius:6px;transform:rotate(-3deg);box-shadow:0 6px 14px -6px #0006}
+.hero{padding:20px 0 50px}
+h1{font:400 clamp(34px,7.4vw,96px)/1 "Rubik Mono One";letter-spacing:-.03em;text-wrap:balance}
+.prices{display:flex;flex-wrap:wrap;gap:16px;margin:30px 0 10px}
+.tag{position:relative;background:var(--paper);padding:20px 26px 20px 40px;border-radius:6px 18px 18px 6px;box-shadow:0 14px 26px -16px #0008;min-width:220px}
+.tag::before{content:"";position:absolute;left:14px;top:50%;width:12px;height:12px;margin-top:-6px;border-radius:50%;background:var(--kraft);box-shadow:inset 0 1px 2px #0006}
+.tag small{display:block;font:500 13px Rubik;color:var(--mute);text-transform:uppercase;letter-spacing:.1em}
+.tag b{font:400 44px/1.05 "Rubik Mono One";font-variant-numeric:tabular-nums}
+.tag.hot{background:var(--yellow)}
+.hero p{font-size:18px;max-width:46ch;margin-top:18px;color:#3a3128}
+
+.ticket{display:grid;grid-template-columns:1fr 1fr;background:var(--paper);border-radius:18px;margin:30px 0 80px;box-shadow:0 30px 60px -30px #0009;overflow:hidden}
+@media(max-width:860px){.ticket{grid-template-columns:1fr}}
+.ticket>*{min-width:0;padding:28px}
+@media(max-width:560px){.ticket>*{padding:20px 16px}}
+.ticket .l{border-right:2px dashed var(--line)}
+@media(max-width:860px){.ticket .l{border-right:0;border-bottom:2px dashed var(--line)}}
+h2{font:400 clamp(24px,3.6vw,38px)/1.1 "Rubik Mono One";margin-bottom:16px}
+.svc{display:grid;gap:8px}
+.svc button{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;padding:14px 16px;border:2px solid var(--ink);border-radius:12px;background:transparent;font:500 16px Rubik;color:var(--ink);cursor:pointer;text-align:left;transition:background .15s,transform .15s}
+.svc button b{font:700 17px Rubik;white-space:nowrap;font-variant-numeric:tabular-nums}
+.svc button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.svc button:active{transform:translateY(2px)}
+.sum{display:flex;justify-content:space-between;align-items:baseline;margin-top:16px;padding-top:14px;border-top:2px solid var(--ink)}
+.sum b{font:400 34px "Rubik Mono One";font-variant-numeric:tabular-nums}
+.lbl{font:700 12px Rubik;text-transform:uppercase;letter-spacing:.12em;color:var(--mute);margin:14px 0 8px}
+.lbl:first-of-type{margin-top:0}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}
+.chip{flex:0 0 auto;border:2px solid var(--ink);background:transparent;padding:8px 12px;border-radius:10px;font:500 14px Rubik;cursor:pointer;color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--yellow)}
+input{width:100%;font:16px Rubik;padding:12px;border-radius:10px;border:2px solid var(--ink);background:#fff;color:var(--ink);margin-top:8px}
+input::placeholder{color:#8a7b69}
+.btn{width:100%;border:0;border-radius:12px;padding:16px;font:700 16px Rubik;background:var(--red);color:#fff;cursor:pointer;margin-top:14px;transition:transform .15s,background .2s;text-transform:uppercase;letter-spacing:.06em}
+.btn:hover{background:#a92b20}.btn:active{transform:translateY(2px)}
+.err{color:var(--red);font-size:13px;min-height:18px;margin-top:6px;font-weight:500}
+.ok{display:none;text-align:center;padding:30px 0}.ok.show{display:block}
+.ok .num{font:400 64px "Rubik Mono One";color:var(--red)}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-bottom:40px}
+@media(max-width:760px){.info{grid-template-columns:1fr}}
+.info div{background:var(--paper);border-radius:14px;padding:18px}
+.info h4{font:700 12px Rubik;text-transform:uppercase;letter-spacing:.12em;color:var(--mute);margin-bottom:6px}
+.info p{font:500 18px/1.35 Rubik}
+footer{padding:10px 0 60px;font-size:13px;color:#3a3128}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="concept">Концепт сайта для барбершопа «Барбер Крафт» — не официальный сайт. Сделал <a href="https://t.me/arseniyspbdev" target="_blank" rel="noopener">Арсений</a> по открытым данным 2ГИС.</div>
+<div class="wrap">
+  <header><a class="logo" href="#">Барбер Крафт</a><span class="open">Мы открылись!</span></header>
+  <div class="hero">
+    <h1>Скорость без потери качества</h1>
+    <div class="prices">
+      <div class="tag hot"><small>стрижка</small><b>700 ₽</b></div>
+      <div class="tag"><small>борода</small><b>600 ₽</b></div>
+    </div>
+    <p>Новый барбершоп на Гражданском проспекте. Честные цены, запись онлайн за полминуты — выберите услугу и время в талоне ниже.</p>
+  </div>
+
+  <div class="ticket" id="book">
+    <div class="l">
+      <h2>Талон на стрижку</h2>
+      <div class="svc" id="svc"></div>
+      <div class="sum"><span>Итого</span><b id="sum">0 ₽</b></div>
+    </div>
+    <div>
+      <div id="form">
+        <div class="lbl">День</div><div class="chips" id="days"></div>
+        <div class="lbl">Время</div><div class="chips" id="times"></div>
+        <div class="lbl">Контакты</div>
+        <input id="nm" placeholder="Имя" autocomplete="given-name">
+        <input id="ph" placeholder="Телефон" inputmode="tel" autocomplete="tel">
+        <div class="err" id="err" role="alert"></div>
+        <button class="btn" id="send" type="button">Взять талон</button>
+      </div>
+      <div class="ok" id="ok" aria-live="polite"><div class="num" id="num">№ 01</div><p id="okTxt"></p><p style="font-size:12px;margin-top:10px;color:var(--mute)">Концепт: в рабочей версии запись уйдёт мастеру.</p></div>
+    </div>
+  </div>
+
+  <div class="info">
+    <div><h4>Адрес</h4><p>Гражданский проспект, 117 к1</p></div>
+    <div><h4>Часы</h4><p>Каждый день 10:00–21:00, по записи</p></div>
+    <div><h4>Рейтинг</h4><p>4,9 в 2ГИС · 26 отзывов</p></div>
+  </div>
+</div>
+<footer><div class="wrap">«Барбер Крафт» · концепт сайта, цены из карточки 2ГИС (октябрь 2026). Сделал Арсений — <a href="https://arseniyspbdev.github.io/" target="_blank" rel="noopener">портфолио</a>.</div></footer>
+
+<script>
+const S=[["Модельная стрижка",700],["Стрижка машинкой (1 насадка)",500],["Оформление усов и бороды",600],["Бритьё опасной бритвой",900],["Окантовка лезвием",200],["Камуфляж седины",900],["Камуфляж седины (борода)",800]];
+const rub=n=>n.toLocaleString("ru-RU")+" ₽",sel=new Set([0]),svc=document.getElementById("svc");
+svc.innerHTML=S.map(([n,p],i)=>`<button type="button" data-i="${i}" aria-pressed="${i===0}"><span>${n}</span><b>${rub(p)}</b></button>`).join("");
+svc.querySelectorAll("button").forEach(b=>b.onclick=()=>{const i=+b.dataset.i;sel.has(i)?sel.delete(i):sel.add(i);b.setAttribute("aria-pressed",sel.has(i));sum()});
+function sum(){document.getElementById("sum").textContent=rub([...sel].reduce((s,i)=>s+S[i][1],0))}sum();
+const now=new Date(),wd=["вс","пн","вт","ср","чт","пт","сб"],days=document.getElementById("days"),times=document.getElementById("times");let day=null,tm=null;
+for(let i=0;i<8;i++){const d=new Date(now);d.setDate(now.getDate()+i);const b=document.createElement("button");b.className="chip";b.type="button";b.textContent=i===0?"сегодня":i===1?"завтра":`${wd[d.getDay()]} ${d.getDate()}`;b.setAttribute("aria-pressed","false");b.onclick=()=>{day=d;days.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b));ts(i)};days.appendChild(b)}
+function ts(i){times.innerHTML="";tm=null;for(let h=10;h<21;h++)for(const m of["00","30"]){if(h===20&&m==="30")continue;if(i===0&&h<=now.getHours())continue;const b=document.createElement("button");b.className="chip";b.type="button";b.textContent=`${h}:${m}`;b.setAttribute("aria-pressed","false");b.onclick=()=>{tm=b.textContent;times.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b))};times.appendChild(b)}}
+days.firstChild.click();if(!times.children.length)days.children[1].click();
+document.getElementById("send").onclick=()=>{const e=document.getElementById("err"),n=document.getElementById("nm").value.trim(),p=document.getElementById("ph").value.replace(/\D/g,"");
+ if(!sel.size)return e.textContent="Выберите хотя бы одну услугу.";if(!tm)return e.textContent="Выберите время.";if(n.length<2)return e.textContent="Напишите имя.";if(p.length<10)return e.textContent="Проверьте телефон: нужно 10–11 цифр.";e.textContent="";
+ document.getElementById("num").textContent="№ "+String(1+Math.floor(Math.random()*40)).padStart(2,"0");
+ document.getElementById("okTxt").textContent=`${n}, ${day.toLocaleDateString("ru-RU",{day:"numeric",month:"long"})} в ${tm}: ${[...sel].map(i=>S[i][0]).join(", ")} — ${document.getElementById("sum").textContent}.`;document.getElementById("form").style.display="none";document.getElementById("ok").classList.add("show")};
+</script>
+</body>
+</html>

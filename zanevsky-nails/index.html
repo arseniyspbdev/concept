@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Студия маникюра на Заневском — концепт сайта</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--mint:#d7f0e4;--mint-2:#b7e3cf;--coral:#ff6b5a;--coral-2:#ff8a7c;--ink:#16302a;--mute:#4f6b63;--paper:#fbfdfb;--line:#cfe5da}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scrollbar-color:var(--coral) var(--paper);-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font:16px/1.55 Onest,system-ui,sans-serif}
+::selection{background:var(--coral);color:#fff}
+:focus-visible{outline:2px solid var(--coral);outline-offset:3px;border-radius:6px}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left))}
+.concept{background:var(--ink);color:var(--mint);font-size:13px;padding:8px 16px;text-align:center}
+.concept a{font-weight:600;text-underline-offset:3px}
+.top{background:var(--mint)}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font:700 15px/1.2 Unbounded;text-decoration:none;text-transform:uppercase;letter-spacing:.02em}
+.logo span{display:block;font:500 11px Onest;letter-spacing:.14em;color:var(--mute)}
+.floor{font:700 13px Unbounded;padding:10px 14px;border-radius:12px;background:var(--ink);color:var(--mint)}
+.hero{padding:30px 0 70px}
+h1{font:700 clamp(36px,7vw,92px)/.98 Unbounded;letter-spacing:-.03em;text-wrap:balance}
+h1 span{color:var(--coral)}
+.hero p{font-size:19px;color:var(--mute);max-width:46ch;margin-top:20px}
+.meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.meta div{background:var(--paper);border-radius:16px;padding:12px 16px;font-size:14px;color:var(--mute)}
+.meta b{display:block;font:700 20px Unbounded;color:var(--ink)}
+
+.builder{display:grid;grid-template-columns:1fr 380px;gap:30px;padding:70px 0}
+@media(max-width:900px){.builder{grid-template-columns:1fr}}
+.builder>*{min-width:0}
+h2{font:700 clamp(28px,4vw,46px)/1.05 Unbounded;letter-spacing:-.02em;text-wrap:balance}
+.sub{color:var(--mute);margin:10px 0 24px}
+.grp{margin-bottom:22px}
+.grp h3{font:600 13px Onest;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:10px}
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}
+.opt{display:flex;justify-content:space-between;align-items:center;gap:10px;text-align:left;padding:14px 16px;border-radius:16px;border:1.5px solid var(--line);background:#fff;font:500 15px Onest;color:var(--ink);cursor:pointer;transition:border-color .2s,background .2s,transform .2s cubic-bezier(.2,.8,.2,1)}
+.opt:active{transform:scale(.98)}
+.opt b{font:700 14px Unbounded;white-space:nowrap;font-variant-numeric:tabular-nums}
+.opt[aria-pressed=true]{border-color:var(--coral);background:#fff3f1}
+.note{font-size:13px;color:var(--mute);margin-top:6px}
+.cart{position:sticky;top:16px;align-self:start;background:var(--ink);color:var(--mint);border-radius:24px;padding:24px}
+.cart h3{font:700 18px Unbounded;margin-bottom:12px}
+.cart ul{list-style:none;padding:0;min-height:60px;font-size:14px}
+.cart li{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px dashed #ffffff22}
+.cart .empty{color:#9cc2b2}
+.tot{display:flex;justify-content:space-between;align-items:baseline;margin:14px 0}
+.tot b{font:700 30px Unbounded;font-variant-numeric:tabular-nums;color:#fff}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:8px}
+.chip{flex:0 0 auto;border:1px solid #ffffff2e;background:transparent;color:var(--mint);padding:8px 11px;border-radius:10px;font:500 13px Onest;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--mint);color:var(--ink)}
+.cart input{width:100%;font:16px Onest;padding:11px;border-radius:10px;border:1px solid #ffffff2e;background:#ffffff12;color:#fff;margin-bottom:6px}
+.cart input::placeholder{color:#9cc2b2}
+.btn{width:100%;border:0;border-radius:14px;padding:15px;font:600 16px Onest;background:var(--coral);color:#fff;cursor:pointer;transition:background .2s,transform .2s cubic-bezier(.2,.8,.2,1)}
+.btn:hover{background:var(--coral-2)}.btn:active{transform:scale(.98)}
+.err{color:#ffb3a8;font-size:13px;min-height:18px}
+.ok{display:none}.ok.show{display:block}
+.ok h4{font:700 20px Unbounded;margin-bottom:6px}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:50px 0;border-top:1px solid var(--line)}
+@media(max-width:760px){.info{grid-template-columns:1fr}}
+.info h4{font:600 12px Onest;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin-bottom:6px}
+.info p{font:500 18px/1.35 Onest}
+footer{padding:20px 0 60px;font-size:13px;color:var(--mute)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="concept">Концепт сайта для студии маникюра и педикюра на Заневском — не официальный сайт. Сделал <a href="https://t.me/arseniyspbdev" target="_blank" rel="noopener">Арсений</a> по открытым данным 2ГИС.</div>
+<div class="top">
+  <div class="wrap">
+    <header><a class="logo" href="#">Студия маникюра<span>и педикюра на Заневском</span></a><span class="floor">4 этаж</span></header>
+    <div class="hero">
+      <h1>Руки, ноги, брови, ресницы — <span>в одном месте</span></h1>
+      <p>Маникюр, педикюр, брови и ресницы на одном этаже. Соберите визит из нескольких услуг — сумма посчитается сама.</p>
+      <div class="meta"><div><b>5,0</b>59 оценок в 2ГИС</div><div><b>10–21</b>каждый день</div><div><b>Заневский, 67 к2</b>Малая Охта</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap builder" id="build">
+  <div>
+    <h2>Соберите визит</h2>
+    <p class="sub">Цены из карточки 2ГИС. Акции месяца — от 990 до 1 990 ₽, в рабочей версии будут отдельным блоком.</p>
+    <div id="groups"></div>
+  </div>
+  <aside class="cart" aria-live="polite">
+    <div id="form">
+      <h3>Ваш визит</h3>
+      <ul id="cart"><li class="empty">Нажмите на услуги слева</li></ul>
+      <div class="tot"><span>Итого</span><b id="sum">0 ₽</b></div>
+      <div class="chips" id="days"></div>
+      <div class="chips" id="times"></div>
+      <input id="nm" placeholder="Имя" autocomplete="given-name">
+      <input id="ph" placeholder="Телефон" inputmode="tel" autocomplete="tel">
+      <div class="err" id="err" role="alert"></div>
+      <button class="btn" id="send" type="button">Записаться</button>
+    </div>
+    <div class="ok" id="ok"><h4>Вы записаны</h4><p id="okTxt" style="font-size:14px"></p><p style="font-size:12px;margin-top:10px;color:#9cc2b2">Концепт: в рабочей версии запись уйдёт администратору.</p></div>
+  </aside>
+</div>
+
+<div class="wrap info">
+  <div><h4>Адрес</h4><p>Заневский проспект, 67 к2, 4 этаж</p></div>
+  <div><h4>Часы</h4><p>Каждый день с 10:00 до 21:00</p></div>
+  <div><h4>Связь</h4><p>ВКонтакте · Max · почта</p></div>
+</div>
+<footer><div class="wrap">Концепт сайта, цены и адрес из карточки 2ГИС (октябрь 2026). Сделал Арсений — <a href="https://arseniyspbdev.github.io/" target="_blank" rel="noopener">портфолио</a>.</div></footer>
+
+<script>
+const G=[["Маникюр",[["Японский маникюр",1900],["СПА-маникюр",1550],["Покрытие гель-лаком",1390],["Гель-лак «Френч»",1690],["Укрепление пудрой или гелем",600],["Лечебное покрытие",500]]],
+["Педикюр",[["Педикюр «Красивые ноготки»",1500],["Классический / комбинированный",1950],["СПА-педикюр",2400],["Снятие + педикюр + покрытие",3540]]],
+["Мелочи",[["Снятие гель-лака",500],["Дизайн одного ногтя",100,"от "],["Покрытие лаком",300]]]];
+const rub=n=>n.toLocaleString("ru-RU")+" ₽",sel=new Map(),gr=document.getElementById("groups");
+gr.innerHTML=G.map(([g,items],gi)=>`<div class="grp"><h3>${g}</h3><div class="opts">${items.map(([n,p,f],i)=>`<button class="opt" data-k="${gi}-${i}" aria-pressed="false"><span>${n}</span><b>${f||""}${rub(p)}</b></button>`).join("")}</div></div>`).join("")+'<p class="note">Брови и ресницы — тоже здесь, в рабочей версии добавим их с ценами салона.</p>';
+gr.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{const k=b.dataset.k,[gi,i]=k.split("-").map(Number);if(sel.has(k)){sel.delete(k);b.setAttribute("aria-pressed","false")}else{sel.set(k,G[gi][1][i]);b.setAttribute("aria-pressed","true")}draw()});
+function draw(){const a=[...sel.values()],c=document.getElementById("cart");c.innerHTML=a.length?a.map(([n,p,f])=>`<li><span>${n}</span><span>${f||""}${rub(p)}</span></li>`).join(""):'<li class="empty">Нажмите на услуги слева</li>';document.getElementById("sum").textContent=(a.some(x=>x[2])?"от ":"")+rub(a.reduce((s,x)=>s+x[1],0))}
+const now=new Date(),wd=["вс","пн","вт","ср","чт","пт","сб"],days=document.getElementById("days"),times=document.getElementById("times");let day=null,tm=null;
+for(let i=0;i<8;i++){const d=new Date(now);d.setDate(now.getDate()+i);const b=document.createElement("button");b.className="chip";b.type="button";b.textContent=i===0?"сегодня":i===1?"завтра":`${wd[d.getDay()]} ${d.getDate()}`;b.setAttribute("aria-pressed","false");b.onclick=()=>{day=d;days.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b));ts(i)};days.appendChild(b)}
+function ts(i){times.innerHTML="";tm=null;for(let h=10;h<20;h++){if(i===0&&h<=now.getHours())continue;const b=document.createElement("button");b.className="chip";b.type="button";b.textContent=h+":00";b.setAttribute("aria-pressed","false");b.onclick=()=>{tm=b.textContent;times.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b))};times.appendChild(b)}}
+days.firstChild.click();if(!times.children.length)days.children[1].click();
+document.getElementById("send").onclick=()=>{const e=document.getElementById("err"),n=document.getElementById("nm").value.trim(),p=document.getElementById("ph").value.replace(/\D/g,"");
+ if(!sel.size)return e.textContent="Выберите хотя бы одну услугу.";if(!tm)return e.textContent="Выберите время.";if(n.length<2)return e.textContent="Напишите имя.";if(p.length<10)return e.textContent="Проверьте телефон: нужно 10–11 цифр.";e.textContent="";
+ document.getElementById("okTxt").textContent=`${n}, ${day.toLocaleDateString("ru-RU",{day:"numeric",month:"long"})} в ${tm}: ${[...sel.values()].map(x=>x[0]).join(", ")} — ${document.getElementById("sum").textContent}.`;document.getElementById("form").style.display="none";document.getElementById("ok").classList.add("show")};
+</script>
+</body>
+</html>

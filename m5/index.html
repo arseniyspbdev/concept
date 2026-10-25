@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>М5 — концепт сайта</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#3b1730;--plum-2:#56243f;--blush:#f7e4e1;--blush-2:#efd0cb;--rose:#c95b6e;--milk:#fffaf7;--ink:#2a1622;--mute:#7a5a66;--line:#ead2cd}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scrollbar-color:var(--rose) var(--milk);-webkit-text-size-adjust:100%}
+body{background:var(--milk);color:var(--ink);font:16px/1.6 Manrope,system-ui,sans-serif}
+::selection{background:var(--rose);color:#fff}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:6px}
+a{color:inherit}img{display:block;max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left))}
+.concept{background:var(--plum);color:var(--blush);font-size:13px;padding:8px 16px;text-align:center}
+.concept a{font-weight:600;text-underline-offset:3px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font:400 34px/1 Prata,serif;text-decoration:none;color:var(--plum);letter-spacing:.02em}
+.logo sup{font:600 11px Manrope;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin-left:6px;vertical-align:10px}
+.hbtn{font:600 14px Manrope;padding:11px 18px;border-radius:999px;background:var(--plum);color:var(--blush);text-decoration:none}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:24px 0 70px}
+@media(max-width:880px){.hero{grid-template-columns:1fr;gap:30px}}
+.hero>*{min-width:0}
+h1{font:400 clamp(42px,6.6vw,86px)/1.02 Prata,serif;color:var(--plum);letter-spacing:-.01em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--rose)}
+.lead{font-size:18px;color:var(--mute);max-width:44ch;margin:20px 0 26px}
+.offer{display:flex;align-items:center;gap:16px;background:var(--blush);border-radius:20px;padding:16px 18px;max-width:480px}
+.offer b{font:400 34px/1 Prata;color:var(--plum);white-space:nowrap}
+.offer span{font-size:14px;color:var(--mute)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:15px 24px;font:600 15px Manrope;background:var(--plum);color:var(--blush);text-decoration:none;cursor:pointer;transition:background .25s,transform .2s cubic-bezier(.2,.8,.2,1)}
+.btn:hover{background:var(--plum-2)}.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--plum);box-shadow:inset 0 0 0 1.5px var(--plum)}
+.swatch{position:relative;aspect-ratio:4/5;border-radius:28px;overflow:hidden;background:var(--blush-2);box-shadow:0 30px 60px -32px #3b173099}
+.swatch img{width:100%;height:100%;object-fit:cover;transition:filter .6s}
+.swatch .tint{position:absolute;inset:0;mix-blend-mode:color;opacity:.0;transition:opacity .5s,background .5s}
+.badge{position:absolute;left:16px;top:16px;background:var(--milk);border-radius:14px;padding:10px 14px;font-size:13px;color:var(--mute);box-shadow:0 10px 24px -12px #0006}
+.badge b{display:block;font:400 26px/1 Prata;color:var(--plum)}
+.pick{position:absolute;left:16px;right:16px;bottom:16px;background:#fffaf7ee;backdrop-filter:blur(8px);border-radius:18px;padding:14px}
+.pick p{font-size:13px;color:var(--mute);margin-bottom:10px}
+.dots{display:flex;gap:10px;flex-wrap:wrap}
+.dot{width:34px;height:34px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 1px var(--line);cursor:pointer;transition:transform .25s cubic-bezier(.2,1.6,.4,1)}
+.dot[aria-pressed=true]{transform:scale(1.18);box-shadow:0 0 0 2px var(--plum)}
+
+section{padding:80px 0}
+h2{font:400 clamp(34px,4.6vw,56px)/1.05 Prata,serif;color:var(--plum);text-wrap:balance}
+.sec-h{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin-bottom:28px}
+.tabs{display:inline-flex;background:var(--blush);border-radius:999px;padding:4px}
+.tab{border:0;background:transparent;padding:10px 18px;border-radius:999px;font:600 14px Manrope;color:var(--mute);cursor:pointer}
+.tab[aria-selected=true]{background:var(--plum);color:var(--blush)}
+.price{display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
+@media(max-width:760px){.price{grid-template-columns:1fr}}
+.row{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}
+.row b{font:400 20px Prata;color:var(--plum);font-variant-numeric:tabular-nums;white-space:nowrap}
+.add{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--line);background:transparent;color:var(--plum);cursor:pointer;display:grid;place-items:center;transition:all .25s}
+.add[aria-pressed=true]{background:var(--rose);border-color:var(--rose);color:#fff}
+
+.book{background:var(--plum);color:var(--blush);border-radius:30px;padding:46px;display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+@media(max-width:880px){.book{grid-template-columns:1fr;padding:26px 18px}}
+.book>*{min-width:0}
+.book h2{color:var(--blush)}
+.book p{color:#e7c7c9}
+.sel{min-height:24px;font-size:14px;color:#f3d9d6;margin-bottom:12px}
+.lbl{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#d7a9b2;margin:14px 0 8px;font-weight:600}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}
+.chip{flex:0 0 auto;border:1px solid #ffffff33;background:transparent;color:var(--blush);padding:9px 12px;border-radius:12px;font:500 14px Manrope;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--blush);color:var(--plum);border-color:var(--blush)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+input{width:100%;font:16px Manrope;padding:12px;border-radius:12px;border:1px solid #ffffff33;background:#ffffff14;color:var(--blush)}
+input::placeholder{color:#c99aa6}
+.book .btn{width:100%;margin-top:12px;background:var(--rose);color:#fff}
+.err{color:#ffc2b8;font-size:13px;min-height:18px;margin-top:8px}
+.ok{display:none}.ok.show{display:block}
+.ok h3{font:400 36px Prata;margin-bottom:8px}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:60px 0}
+@media(max-width:760px){.info{grid-template-columns:1fr}}
+.info h3{font:600 12px Manrope;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin-bottom:8px}
+.info p{font:400 21px/1.35 Prata;color:var(--plum)}
+footer{border-top:1px solid var(--line);padding:28px 0 60px;font-size:13px;color:var(--mute)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="concept">Концепт сайта для студии красоты М5 — не официальный сайт. Сделал <a href="https://t.me/arseniyspbdev" target="_blank" rel="noopener">Арсений</a> по открытым данным 2ГИС. Фото — Unsplash.</div>
+<div class="wrap">
+  <header><a class="logo" href="#">М5<sup>studio</sup></a><a class="hbtn" href="#book">Записаться</a></header>
+  <div class="hero">
+    <div>
+      <h1>Маникюр, за которым <em>возвращаются</em></h1>
+      <p class="lead">Студия красоты в ЖК «Наутилус» на набережной Матисова канала. Маникюр и педикюр, наращивание, стрижки и окрашивание — каждый день с 10 до 22 по записи.</p>
+      <div class="offer"><b>1 950 ₽</b><span>первое посещение: снятие, обработка и покрытие гель-лаком</span></div>
+      <div class="btns"><a class="btn" href="#book">Записаться</a><a class="btn ghost" href="#price">Цены</a></div>
+    </div>
+    <div class="swatch" id="sw">
+      <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=70" alt="Руки с маникюром" id="swImg">
+      <div class="tint" id="tint"></div>
+      <div class="badge"><b>4,9</b>206 отзывов · Премия 2ГИС</div>
+      <div class="pick"><p>Примерьте оттенок прямо на фото</p><div class="dots" id="dots"></div></div>
+    </div>
+  </div>
+</div>
+
+<section id="price" style="background:var(--blush)">
+  <div class="wrap">
+    <div class="sec-h"><h2>Цены</h2><div class="tabs" role="tablist" id="tabs"></div></div>
+    <div class="price" id="list"></div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="book">
+      <div>
+        <h2>Запись в М5</h2>
+        <p style="margin-top:14px">Отметьте услуги в прайсе плюсиком — они появятся здесь. Выбранный на фото оттенок тоже передадим мастеру.</p>
+      </div>
+      <div>
+        <div id="form">
+          <div class="sel" id="sel">Пока ничего не выбрано — отметьте услуги в прайсе.</div>
+          <div class="lbl">День</div><div class="chips" id="days"></div>
+          <div class="lbl">Время</div><div class="chips" id="times"></div>
+          <div class="lbl">Контакты</div>
+          <div class="two"><input id="nm" placeholder="Имя" autocomplete="given-name"><input id="ph" placeholder="Телефон" inputmode="tel" autocomplete="tel"></div>
+          <div class="err" id="err" role="alert"></div>
+          <button class="btn" id="send" type="button">Записаться</button>
+        </div>
+        <div class="ok" id="ok" aria-live="polite"><h3>Вы записаны</h3><p id="okTxt"></p><p style="font-size:12px;margin-top:10px">Концепт: в рабочей версии запись уйдёт администратору в Telegram.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap info">
+  <div><h3>Адрес</h3><p>ЖК «Наутилус», набережная Матисова канала, 5, 1 этаж</p></div>
+  <div><h3>Часы</h3><p>Каждый день 10:00–22:00, по записи</p></div>
+  <div><h3>Связь</h3><p>Telegram · WhatsApp · ВКонтакте</p></div>
+</div>
+<footer><div class="wrap">М5 · концепт сайта, цены из карточки 2ГИС (октябрь 2026), фото — Unsplash. Сделал Арсений — <a href="https://arseniyspbdev.github.io/" target="_blank" rel="noopener">портфолио</a>.</div></footer>
+
+<script>
+const P={"Маникюр":[["Первое посещение","снятие, обработка, гель-лак",1950],["Маникюр с гель-лаком и дизайном","",3100],["Снятие гель-лака + маникюр","мастер",1500],["Маникюр + обычный лак","",1900],["Мужской маникюр","",2000],["Детский маникюр","",1200],["Наращивание ногтей","",4700],["Коррекция наращенных ногтей","",3400]],
+"Педикюр":[["Педикюр + гель-лак","топ-мастер, без снятия",3000],["Педикюр с обычным лаком","",2800],["Обработка стоп","",1200],["СПА-уход для ног","10 минут",600]],
+"Уход":[["Парафинотерапия","для рук и ног",1000]]};
+const C=[["#c95b6e","ягодный"],["#e8b4a8","нюд"],["#8b1e2d","бордо"],["#f0d7c9","молочный"],["#3b1730","слива"]];
+const rub=n=>n.toLocaleString("ru-RU")+" ₽",chosen=new Map();let tone=null;
+const dots=document.getElementById("dots"),tint=document.getElementById("tint");
+C.forEach(([c,n])=>{const b=document.createElement("button");b.className="dot";b.style.background=c;b.setAttribute("aria-label","Оттенок: "+n);b.setAttribute("aria-pressed","false");b.onclick=()=>{const on=b.getAttribute("aria-pressed")!=="true";dots.querySelectorAll(".dot").forEach(x=>x.setAttribute("aria-pressed","false"));if(on){b.setAttribute("aria-pressed","true");tone=n;tint.style.background=c;tint.style.opacity=.38}else{tone=null;tint.style.opacity=0}upd()};dots.appendChild(b)});
+const tabs=document.getElementById("tabs"),list=document.getElementById("list");
+Object.keys(P).forEach((k,i)=>{const b=document.createElement("button");b.className="tab";b.role="tab";b.textContent=k;b.setAttribute("aria-selected",i===0);b.onclick=()=>{tabs.querySelectorAll(".tab").forEach(x=>x.setAttribute("aria-selected",x===b));show(k)};tabs.appendChild(b)});
+function show(k){list.innerHTML=P[k].map(([n,s,p],i)=>{const id=k+"|"+i;return `<div class="row"><div>${n}${s?`<div style="font-size:13px;color:var(--mute)">${s}</div>`:""}</div><b>${rub(p)}</b><button class="add" data-id="${id}" aria-pressed="${chosen.has(id)}" aria-label="Добавить: ${n}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="${chosen.has(id)?"M5 12l5 5 9-10":"M12 5v14M5 12h14"}"/></svg></button></div>`}).join("");
+ list.querySelectorAll(".add").forEach(b=>b.onclick=()=>{const id=b.dataset.id,[k2,i]=id.split("|");chosen.has(id)?chosen.delete(id):chosen.set(id,P[k2][+i]);show(k2);upd()})}
+function upd(){const a=[...chosen.values()],s=a.reduce((x,i)=>x+i[2],0);document.getElementById("sel").textContent=a.length?a.map(i=>i[0]).join(", ")+" — "+rub(s)+(tone?" · оттенок: "+tone:""):"Пока ничего не выбрано — отметьте услуги в прайсе."}
+show("Маникюр");
+const now=new Date(),wd=["вс","пн","вт","ср","чт","пт","сб"],days=document.getElementById("days"),times=document.getElementById("times");let day=null,tm=null;
+for(let i=0;i<10;i++){const d=new Date(now);d.setDate(now.getDate()+i);const b=document.createElement("button");b.className="chip";b.type="button";b.textContent=i===0?"сегодня":i===1?"завтра":`${wd[d.getDay()]}, ${d.getDate()}`;b.setAttribute("aria-pressed","false");b.onclick=()=>{day=d;days.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b));ts(i)};days.appendChild(b)}
+function ts(i){times.innerHTML="";tm=null;for(let h=10;h<21;h++){if(i===0&&h<=now.getHours())continue;const b=document.createElement("button");b.className="chip";b.type="button";b.textContent=h+":00";b.setAttribute("aria-pressed","false");b.onclick=()=>{tm=b.textContent;times.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b))};times.appendChild(b)}}
+days.firstChild.click();if(!times.children.length)days.children[1].click();
+document.getElementById("send").onclick=()=>{const e=document.getElementById("err"),n=document.getElementById("nm").value.trim(),p=document.getElementById("ph").value.replace(/\D/g,"");
+ if(!chosen.size)return e.textContent="Отметьте хотя бы одну услугу в прайсе.";if(!tm)return e.textContent="Выберите время.";if(n.length<2)return e.textContent="Напишите имя.";if(p.length<10)return e.textContent="Проверьте телефон: нужно 10–11 цифр.";e.textContent="";
+ document.getElementById("okTxt").textContent=`${n}, ждём вас ${day.toLocaleDateString("ru-RU",{day:"numeric",month:"long"})} в ${tm}. ${document.getElementById("sel").textContent}.`;document.getElementById("form").style.display="none";document.getElementById("ok").classList.add("show")};
+</script>
+</body>
+</html>

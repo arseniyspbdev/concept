@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Process barber — концепт сайта</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--coal:#121212;--coal-2:#1c1b1a;--coal-3:#2a2826;--copper:#c4834f;--copper-2:#e0a476;--bone:#ece6dc;--mute:#a59d92;--line:rgba(236,230,220,.13)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scrollbar-color:var(--copper) var(--coal);-webkit-text-size-adjust:100%}
+body{background:var(--coal);color:var(--bone);font:16px/1.6 Manrope,system-ui,sans-serif}
+::selection{background:var(--copper);color:var(--coal)}
+:focus-visible{outline:2px solid var(--copper-2);outline-offset:3px;border-radius:6px}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left))}
+.concept{background:var(--bone);color:var(--coal);font-size:13px;padding:8px 16px;text-align:center}
+.concept a{font-weight:600;text-underline-offset:3px}
+header{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
+.logo{font:800 15px Manrope;letter-spacing:.32em;text-transform:uppercase;text-decoration:none}
+.logo i{font:italic 400 22px "Instrument Serif";letter-spacing:0;text-transform:none;color:var(--copper-2);margin-left:6px}
+.hbtn{font:600 14px Manrope;padding:11px 18px;border-radius:999px;border:1px solid var(--copper);color:var(--copper-2);text-decoration:none}
+.hero{padding:60px 0 40px}
+h1{font:400 clamp(48px,9vw,128px)/.92 "Instrument Serif",serif;letter-spacing:-.02em;text-wrap:balance}
+h1 i{color:var(--copper-2)}
+.hero-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:end;margin-top:26px}
+.hero-row p{font-size:18px;color:var(--mute);max-width:46ch}
+.promo{border:1px solid var(--copper);border-radius:16px;padding:14px 18px;font-size:14px;color:var(--mute)}
+.promo b{display:block;font:800 30px Manrope;color:var(--copper-2)}
+
+/* process steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:40px 0 0}
+@media(max-width:820px){.steps{grid-template-columns:1fr 1fr}}
+.step{padding:26px 20px;border-right:1px solid var(--line);transition:background .4s}
+.step:last-child{border-right:0}
+@media(max-width:820px){.step:nth-child(2n){border-right:0}.step:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+.step small{font:500 12px Manrope;letter-spacing:.14em;text-transform:uppercase;color:var(--copper)}
+.step h3{font:400 30px/1.1 "Instrument Serif";margin:8px 0 6px}
+.step p{font-size:14px;color:var(--mute)}
+.step.lit{background:var(--coal-2)}
+
+section{padding:80px 0}
+h2{font:400 clamp(38px,5vw,64px)/1 "Instrument Serif",serif;text-wrap:balance}
+.sub{color:var(--mute);margin:10px 0 30px;max-width:56ch}
+.combo{display:grid;grid-template-columns:1.1fr .9fr;gap:30px}
+@media(max-width:880px){.combo{grid-template-columns:1fr}}
+.combo>*{min-width:0}
+.lst{display:grid;gap:8px}
+.it{display:grid;grid-template-columns:24px 1fr auto;gap:14px;align-items:center;padding:15px 16px;border:1px solid var(--line);border-radius:14px;cursor:pointer;transition:border-color .2s,background .2s}
+.it:hover{border-color:#ece6dc40}
+.it input{appearance:none;width:20px;height:20px;border:1.5px solid var(--mute);border-radius:50%;margin:0;cursor:pointer;display:grid;place-items:center}
+.it input:checked{border-color:var(--copper-2)}
+.it input:checked::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--copper-2)}
+.it:has(input:checked){border-color:var(--copper);background:var(--coal-2)}
+.it small{display:block;color:var(--mute);font-size:13px}
+.it b{font:600 16px Manrope;font-variant-numeric:tabular-nums;white-space:nowrap}
+.panel{background:var(--coal-2);border-radius:22px;padding:24px;position:sticky;top:16px;align-self:start;box-shadow:0 30px 60px -30px #000}
+.panel h3{font:400 30px "Instrument Serif";margin-bottom:10px}
+.line{display:flex;justify-content:space-between;color:var(--mute);font-size:14px;padding:4px 0}
+.line.big{color:var(--bone);font-size:16px;border-top:1px solid var(--line);margin-top:8px;padding-top:12px}
+.line.big b{font:800 28px Manrope;color:var(--copper-2);font-variant-numeric:tabular-nums}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-top:14px}
+.chip{flex:0 0 auto;border:1px solid var(--line);background:transparent;color:var(--bone);padding:8px 11px;border-radius:10px;font:500 13px Manrope;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--bone);color:var(--coal)}
+.panel input[type=text],.panel input[type=tel]{width:100%;font:16px Manrope;padding:11px;border-radius:10px;border:1px solid var(--line);background:#ffffff0d;color:var(--bone);margin-top:8px}
+.panel input::placeholder{color:#7f786f}
+.btn{width:100%;border:0;border-radius:12px;padding:15px;font:700 15px Manrope;background:var(--copper);color:var(--coal);cursor:pointer;margin-top:12px;transition:background .2s,transform .2s cubic-bezier(.2,.8,.2,1)}
+.btn:hover{background:var(--copper-2)}.btn:active{transform:scale(.98)}
+.err{color:#f2a48a;font-size:13px;min-height:18px;margin-top:6px}
+.ok{display:none}.ok.show{display:block}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;border-top:1px solid var(--line);padding:50px 0}
+@media(max-width:760px){.info{grid-template-columns:1fr}}
+.info h4{font:500 12px Manrope;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);margin-bottom:6px}
+.info p{font:400 24px/1.25 "Instrument Serif"}
+footer{padding:20px 0 60px;font-size:13px;color:var(--mute)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="concept">Концепт сайта для Process barber — не официальный сайт. Сделал <a href="https://t.me/arseniyspbdev" target="_blank" rel="noopener">Арсений</a> по открытым данным 2ГИС.</div>
+<div class="wrap">
+  <header><a class="logo" href="#">Process<i>barber</i></a><a class="hbtn" href="#combo">Записаться</a></header>
+  <div class="hero">
+    <h1>Стрижка — это <i>процесс</i>, а не конвейер</h1>
+    <div class="hero-row">
+      <p>Мужская парикмахерская в ЖК «Чёрная речка». Стрижки, оформление бороды и традиционное влажное бритьё — по записи, каждый день с 10 до 22.</p>
+      <div class="promo"><b>−20%</b>на первое посещение</div>
+    </div>
+  </div>
+  <div class="steps" id="steps">
+    <div class="step"><small>шаг 1</small><h3>Разговор</h3><p>Обсуждаем форму, длину и как вы укладываетесь дома.</p></div>
+    <div class="step"><small>шаг 2</small><h3>Стрижка</h3><p>Ножницы и машинка, без спешки.</p></div>
+    <div class="step"><small>шаг 3</small><h3>Борода или бритьё</h3><p>Оформление бороды или влажное бритьё опасной бритвой.</p></div>
+    <div class="step"><small>шаг 4</small><h3>Укладка</h3><p>Мытьё головы и укладка — по желанию.</p></div>
+  </div>
+</div>
+
+<section id="combo">
+  <div class="wrap">
+    <h2>Соберите свой процесс</h2>
+    <p class="sub">Выберите стрижку и что добавить к ней — увидите итог со скидкой для первого визита. Цены из карточки 2ГИС.</p>
+    <div class="combo">
+      <div>
+        <div class="lst" id="cuts"></div>
+        <div class="lst" id="adds" style="margin-top:18px"></div>
+      </div>
+      <aside class="panel" aria-live="polite">
+        <div id="form">
+          <h3>Ваш визит</h3>
+          <div id="lines"></div>
+          <label class="line" style="cursor:pointer"><span><input type="checkbox" id="first" checked style="accent-color:#c4834f;margin-right:8px">первое посещение (−20%)</span><span id="disc">0 ₽</span></label>
+          <div class="line big"><span>Итого</span><b id="sum">0 ₽</b></div>
+          <div class="chips" id="days"></div>
+          <div class="chips" id="times"></div>
+          <input type="text" id="nm" placeholder="Имя" autocomplete="given-name">
+          <input type="tel" id="ph" placeholder="Телефон" inputmode="tel" autocomplete="tel">
+          <div class="err" id="err" role="alert"></div>
+          <button class="btn" id="send" type="button">Записаться</button>
+        </div>
+        <div class="ok" id="ok"><h3>До встречи</h3><p id="okTxt" style="color:var(--mute);font-size:14px"></p><p style="font-size:12px;margin-top:10px;color:#7f786f">Концепт: в рабочей версии запись уйдёт администратору.</p></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="wrap info">
+  <div><h4>Адрес</h4><p>ЖК «Чёрная речка», Белоостровская улица, 12 ст1</p></div>
+  <div><h4>Часы</h4><p>Каждый день 10:00–22:00, по записи</p></div>
+  <div><h4>Рейтинг</h4><p>5,0 в 2ГИС · 16 отзывов</p></div>
+</div>
+<footer><div class="wrap">Process barber · концепт сайта, цены из карточки 2ГИС (октябрь 2026). Сделал Арсений — <a href="https://arseniyspbdev.github.io/" target="_blank" rel="noopener">портфолио</a>.</div></footer>
+
+<script>
+const CUT=[["Мужская стрижка","",3200],["Короткая мужская стрижка","",2600],["Стрижка машинкой","одна длина",1500],["Детская стрижка","",2200],["Без стрижки","только борода или бритьё",0]];
+const ADD=[["Оформление бороды","",2600],["Стрижка бороды","",1300],["Влажное бритьё лица","традиционное",2500],["Влажное бритьё головы","традиционное",2500],["Мытьё головы + укладка","",1100],["Спа-уход за кожей лица «VOLCANO»","",1500],["Воск: нос, уши","",500]];
+const rub=n=>n.toLocaleString("ru-RU")+" ₽";let cut=0;const adds=new Set();
+const cEl=document.getElementById("cuts"),aEl=document.getElementById("adds");
+cEl.innerHTML=CUT.map(([n,s,p],i)=>`<label class="it"><input type="radio" name="cut" value="${i}" ${i===0?"checked":""}><span>${n}${s?`<small>${s}</small>`:""}</span><b>${p?rub(p):"—"}</b></label>`).join("");
+aEl.innerHTML=ADD.map(([n,s,p],i)=>`<label class="it"><input type="checkbox" value="${i}" style="border-radius:6px"><span>${n}${s?`<small>${s}</small>`:""}</span><b>+ ${rub(p)}</b></label>`).join("");
+cEl.querySelectorAll("input").forEach(r=>r.onchange=()=>{cut=+r.value;calc()});
+aEl.querySelectorAll("input").forEach(c=>c.onchange=()=>{c.checked?adds.add(+c.value):adds.delete(+c.value);calc()});
+document.getElementById("first").onchange=calc;
+function calc(){
+ // комплекс: стрижка + борода/бритьё лица по цене из прайса
+ const lines=[];let s=0;
+ const beard=[0,2].find(i=>adds.has(i));
+ if((cut===0||cut===1)&&beard!==undefined){const p=cut===0?4600:4100;lines.push([`Комплекс: ${CUT[cut][0].toLowerCase()} + ${ADD[beard][0].toLowerCase()}`,p]);s+=p;[...adds].filter(i=>i!==beard).forEach(i=>{lines.push([ADD[i][0],ADD[i][2]]);s+=ADD[i][2]})}
+ else{if(CUT[cut][2]){lines.push([CUT[cut][0],CUT[cut][2]]);s+=CUT[cut][2]}[...adds].forEach(i=>{lines.push([ADD[i][0],ADD[i][2]]);s+=ADD[i][2]})}
+ const d=document.getElementById("first").checked?Math.round(s*.2):0;
+ document.getElementById("lines").innerHTML=lines.map(([n,p])=>`<div class="line"><span>${n}</span><span>${rub(p)}</span></div>`).join("")||'<div class="line"><span>Выберите услуги</span></div>';
+ document.getElementById("disc").textContent=d?"−"+rub(d):"0 ₽";document.getElementById("sum").textContent=rub(s-d);
+ const st=document.querySelectorAll(".step");st.forEach(x=>x.classList.remove("lit"));st[0].classList.add("lit");if(CUT[cut][2])st[1].classList.add("lit");if([0,1,2,3].some(i=>adds.has(i)))st[2].classList.add("lit");if(adds.has(4))st[3].classList.add("lit");}
+calc();
+const now=new Date(),wd=["вс","пн","вт","ср","чт","пт","сб"],days=document.getElementById("days"),times=document.getElementById("times");let day=null,tm=null;
+for(let i=0;i<8;i++){const d=new Date(now);d.setDate(now.getDate()+i);const b=document.createElement("button");b.className="chip";b.type="button";b.textContent=i===0?"сегодня":i===1?"завтра":`${wd[d.getDay()]} ${d.getDate()}`;b.setAttribute("aria-pressed","false");b.onclick=()=>{day=d;days.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b));ts(i)};days.appendChild(b)}
+function ts(i){times.innerHTML="";tm=null;for(let h=10;h<21;h++){if(i===0&&h<=now.getHours())continue;const b=document.createElement("button");b.className="chip";b.type="button";b.textContent=h+":00";b.setAttribute("aria-pressed","false");b.onclick=()=>{tm=b.textContent;times.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b))};times.appendChild(b)}}
+days.firstChild.click();if(!times.children.length)days.children[1].click();
+document.getElementById("send").onclick=()=>{const e=document.getElementById("err"),n=document.getElementById("nm").value.trim(),p=document.getElementById("ph").value.replace(/\D/g,"");
+ if(document.getElementById("sum").textContent==="0 ₽")return e.textContent="Выберите хотя бы одну услугу.";if(!tm)return e.textContent="Выберите время.";if(n.length<2)return e.textContent="Напишите имя.";if(p.length<10)return e.textContent="Проверьте телефон: нужно 10–11 цифр.";e.textContent="";
+ document.getElementById("okTxt").textContent=`${n}, ${day.toLocaleDateString("ru-RU",{day:"numeric",month:"long"})} в ${tm}. Итого ${document.getElementById("sum").textContent}.`;document.getElementById("form").style.display="none";document.getElementById("ok").classList.add("show")};
+</script>
+</body>
+</html>
